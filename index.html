@@ -7,20 +7,44 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="app.css">
     <title>Amsboard</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-auto-rows: 50% 50%;
+        }
+    </style>
 </head>
 
 <body>
 
+    <div>
+        <a class="weatherwidget-io" href="https://forecast7.com/en/52d374d90/amsterdam/" data-label_1="AMSTERDAM"
+            data-label_2="IS IT RAINING?" data-font="Roboto" data-icons="Climacons Animated" data-days="5" data-theme="original">AMSTERDAM
+            IS IT RAINING?</a>
+    </div>
     <div class="grid">
         <div class="cell">
             <iframe src='https://gadgets.buienradar.nl/gadget/zoommap/?lat=52.379119&lng=4.900177&overname=2&zoom=13&naam=1073TK&size=2b&voor=1'
                 scrolling=no width="100%" height=330 frameborder=no></iframe>
-            g
+        </div>
+        <div class="cell">
+            <!-- SnapWidget -->
+            <script src="https://snapwidget.com/js/snapwidget.js"></script>
+            <iframe src="https://snapwidget.com/embed/584715" class="snapwidget-widget" allowtransparency="true"
+                frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
         </div>
     </div>
 
 
     <script src="app.js"></script>
+    <script>
+        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+    </script>
 </body>
 
 </html>

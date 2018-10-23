@@ -1,3 +1,3 @@
 setInterval(() => {
   window.location.reload();
-}, 30000);
+}, 60000 * 5);
