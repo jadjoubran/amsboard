@@ -18,6 +18,17 @@
             grid-template-columns: 1fr 1fr 1fr;
             grid-auto-rows: 50% 50%;
         }
+
+        .cell {
+            height: 50vh;
+        }
+
+        .cell-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -31,17 +42,19 @@
     <div class="grid">
         <div class="cell">
             <iframe src="https://www.buienalarm.nl/amsterdam-noord-holland-nederland/@52.36798,4.90356" width="100%"
-                height="430px" frameborder="0"></iframe>
+                style="height: 50vh" frameborder="0"></iframe>
         </div>
-        <div class="cell">
-            <h1>Is it beer o'clock?</h1>
-            <p id="beer-clock"></p>
+        <div class="cell cell-center">
+            <div>
+                <h1>Is it beer o'clock?</h1>
+                <div id="beer-clock"></div>
+            </div>
         </div>
         <div class="cell">
             <!-- SnapWidget -->
             <script src="https://snapwidget.com/js/snapwidget.js"></script>
             <iframe src="https://snapwidget.com/embed/615411" class="snapwidget-widget" allowtransparency="true"
-                frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+                frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;height:50vh!important; "></iframe>
         </div>
         <div class="cell">
             <div id="ferries"></div>
